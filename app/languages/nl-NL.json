@@ -1,0 +1,270 @@
+﻿{
+  "language": "Nederlands",
+  "flagClass": "flag-icon-nl",
+  "title": "ScreenIVF",
+  "intro": "Een IVF behandeling is intensief. Niet alleen lichamelijk, maar ook emotioneel. Daarom is het belangrijk dat u ook in emotioneel opzicht steun krijgt. Daarvoor hebben wij een korte vragenlijst ontwikkeld. Uw antwoorden op de vragen geven informatie over uw psychische veerkracht. De vragen hebben verschillende thema's:",
+  "introBullets": [
+    "Spanning en Somberheid: deze vragen gaan over uw stemming",
+    "Acceptatie en hulpeloosheid: deze vragen gaan over de betekenis van uw vruchtbaarheidsproblemen voor uw dagelijks leven",
+    "Sociale steun: deze vragen gaan over andere mensen die u eventueel tot steun kunnen zijn"
+  ],
+  "step": "Stap",
+  "next": "Volgende",
+  "previous": "Vorige",
+  "start": "Start",
+  "stepIntro": "Introductie",
+  "stepResult": "Resultaat",
+  "copyright": "ESHRE SIG psychology and counselling",
+  "disclaimer": "DISCLAIMER: deze invultool is gebaseerd op een gevalideerde vragenlijst (Verhaak et al. 2010) die bij IVF patiënten wordt afgenomen. Aan de vragenlijst of de uitslag kunnen geen rechten of plichten worden ontleend. Wij adviseren u bij vragen contact op te nemen met uw behandelaar.",
+  "atRisk": "Op basis van uw antwoorden blijkt dat u baat zou kunnen hebben bij begeleiding door een maatschappelijk werker of psycholoog. U kunt via uw huisarts of andere zorgverlener vragen om u te verwijzen. Mocht u vragen hebben aarzel dan niet om met een zorgverlener contact op te nemen. Neemt u bij een afspraak de uitslag van deze vragenlijst mee.<br /> Bij een donkerrode uitslag adviseren wij u om op korte termijn contact op te nemen met uw huisarts of andere zorgverlener. Neemt u dan ook de uitslag mee.",
+  "notAtRisk": "Op basis van uw antwoorden is er nu geen reden voor begeleiding door een maatschappelijk werker of psycholoog. Mocht u behoefte hebben aan begeleiding of mocht u vragen geven aarzel dan niet om contact op te nemen met uw huisarts of andere zorgverlener. U kunt de uitslag van deze vragenlijst printen en eventueel meenemen.",
+  "dimensionAnxiety": "Spanning",
+  "dimensionDepression": "Somberheid",
+  "dimensionAcceptance": "Acceptatie",
+  "dimensionHelpless": "Hulpeloosheid",
+  "dimensionSupport": "Sociale steun",
+  "instruction": "Instructie",
+  "instructionAnxiety": "Hieronder vindt u een aantal uitspraken, die mensen hebben gebruikt om zichzelf te beschrijven. Lees iedere uitspraak door en zet dan een kringetje om het cijfer rechts van die uitspraak om daarmee aan te geven hoe u zich <u>de afgelopen week</u> heeft gevoeld.",
+  "instructionDepression": "Deze vragenlijst bestaat uit een aantal uitspraken die in groepen bij elkaar staan. Leest u iedere groep aandachtig door. Kies dan bij elke groep die uitspraak die het best weergeeft hoe u zich <u>de afgelopen week</u> heeft gevoeld.",
+  "instructionAcceptance": "Hieronder vindt u een lijst met diverse uitspraken van mensen met vruchtbaarheidsproblemen. Wij willen u vragen aan te geven in welke mate u het met deze uitspraken eens bent. U doet dit door een van de antwoordmogelijkheden achter de uitspraak te omcirkelen.",
+  "instructionHelpless": "",
+  "instructionSupport": "Hieronder vindt u een aantal uitspraken die gaan over steun van andere mensen. Kies de uitspraak aan dat het meest op u van toepassing is. Het gaat over <u>het afgelopen half jaar</u>.",
+  "anx01": {
+    "question": "Ik voel me prettig",
+    "option0": "Bijna nooit",
+    "option1": "Soms",
+    "option2": "Vaak",
+    "option3": "Bijna altijd"
+  },
+  "anx02": {
+    "question": "Ik voel me tevreden",
+    "option0": "Bijna nooit",
+    "option1": "Soms",
+    "option2": "Vaak",
+    "option3": "Bijna altijd"
+  },
+  "anx03": {
+    "question": "Ik pieker te veel over dingen die niet zo belangrijk zijn",
+    "option0": "Bijna nooit",
+    "option1": "Soms",
+    "option2": "Vaak",
+    "option3": "Bijna altijd"
+  },
+  "anx04": {
+    "question": "Ik ben gelukkig",
+    "option0": "Bijna nooit",
+    "option1": "Soms",
+    "option2": "Vaak",
+    "option3": "Bijna altijd"
+  },
+  "anx05": {
+    "question": "Ik word geplaagd door storende gedachten",
+    "option0": "Bijna nooit",
+    "option1": "Soms",
+    "option2": "Vaak",
+    "option3": "Bijna altijd"
+  },
+  "anx06": {
+    "question": "Ik voel me veilig",
+    "option0": "Bijna nooit",
+    "option1": "Soms",
+    "option2": "Vaak",
+    "option3": "Bijna altijd"
+  },
+  "anx07": {
+    "question": "Ik ben tevreden",
+    "option0": "Bijna nooit",
+    "option1": "Soms",
+    "option2": "Vaak",
+    "option3": "Bijna altijd"
+  },
+  "anx08": {
+    "question": "Er zijn gedachten die ik moeilijk los kan laten",
+    "option0": "Bijna nooit",
+    "option1": "Soms",
+    "option2": "Vaak",
+    "option3": "Bijna altijd"
+  },
+  "anx09": {
+    "question": "Ik neem teleurstellingen zo zwaar op dat ik ze niet meer van mij af kan zetten  ",
+    "option0": "Bijna nooit",
+    "option1": "Soms",
+    "option2": "Vaak",
+    "option3": "Bijna altijd"
+  },
+  "anx10": {
+    "question": "Ik raak helemaal gespannen en in beroering als ik denk aan mijn zorgen van de laatste tijd",
+    "option0": "Bijna nooit",
+    "option1": "Soms",
+    "option2": "Vaak",
+    "option3": "Bijna altijd"
+  },
+  "dep01": {
+    "question": "A",
+    "option0": "Ik voel me niet verdrietig",
+    "option1": "Ik voel me verdrietig",
+    "option2": "Ik ben voortdurend verdrietig en kan het niet van me afzetten",
+    "option3": "Ik ben zo verdrietig of ongelukkig dat ik het niet meer verdragen kan"
+  },
+  "dep02": {
+    "question": "B",
+    "option0": "Ik ben niet bijzonder moedeloos over de toekomst",
+    "option1": "Ik ben moedeloos over de toekomst",
+    "option2": "Ik heb het gevoel dat ik niets heb om naar uit te zien",
+    "option3": "Ik heb het gevoel dat de toekomst hopeloos is en dat er geen kans op verbetering is"
+  },
+  "dep03": {
+    "question": "C",
+    "option0": "Ik voel me geen mislukkeling",
+    "option1": "Ik heb het gevoel dat ik vaker iets verkeerd heb gedaan dan een gemiddeld iemand",
+    "option2": "Als ik op mijn leven terug kijk zie ik alleen maar een hoop mislukkingen",
+    "option3": "Ik heb het gevoel dat ik als mens een volledige mislukking ben"
+  },
+  "dep04": {
+    "question": "D",
+    "option0": "Ik beleef overal net zoveel plezier aan als vroeger",
+    "option1": "Ik geniet niet meer zoals vroeger",
+    "option2": "Ik vind nergens nog echte bevrediging in",
+    "option3": "Ik heb nergens meer voldoening van; ik vind alles vervelend"
+  },
+  "dep05": {
+    "question": "E",
+    "option0": "Ik voel me niet teleurgesteld in mezelf",
+    "option1": "Ik ben teleurgesteld in mezelf",
+    "option2": "Ik walg van mezelf",
+    "option3": "Ik haat mezelf"
+  },
+  "dep06": {
+    "question": "F",
+    "option0": "Ik heb niet het gevoel dat ik slechter ben dan iemand anders",
+    "option1": "Ik heb kritiek op mezelf vanwege mijn zwakheden of fouten",
+    "option2": "Ik geef mezelf steeds de schuld van mijn gebreken",
+    "option3": "Ik geef mezelf de schuld van al het slechte dat er gebeurt"
+  },
+  "dep07": {
+    "question": "G",
+    "option0": "Ik overweeg absoluut niet om een eind aan mijn leven te maken",
+    "option1": "Ik overweeg wel eens om een eind aan mijn leven te maken, maar ik zou dat nooit doen",
+    "option2": "Ik zou een eind aan mijn leven willen maken",
+    "option3": "Ik zou een eind aan mijn leven maken als ik de kans kreeg"
+  },
+  "acc01": {
+    "question": "Door de onvruchtbaarheid mis ik datgene wat het meest belangrijk voor mij is.",
+    "option1": "Niet mee eens",
+    "option2": "Een beetje",
+    "option3": "In sterke mate",
+    "option4": "Helemaal mee eens"
+  },
+  "acc02": {
+    "question": "Ik kan de gevolgen, die de onvruchtbaarheid met zich mee brengt aan.",
+    "option1": "Niet mee eens",
+    "option2": "Een beetje",
+    "option3": "In sterke mate",
+    "option4": "Helemaal mee eens"
+  },
+  "acc03": {
+    "question": "Ik heb met de onvruchtbaarheid leren leven.",
+    "option1": "Niet mee eens",
+    "option2": "Een beetje",
+    "option3": "In sterke mate",
+    "option4": "Helemaal mee eens"
+  },
+  "acc04": {
+    "question": "De onvruchtbaarheid beheerst mijn leven.",
+    "option1": "Niet mee eens",
+    "option2": "Een beetje",
+    "option3": "In sterke mate",
+    "option4": "Helemaal mee eens"
+  },
+  "acc05": {
+    "question": "De onvruchtbaarheid geeft mij soms het gevoel nutteloos te zijn.",
+    "option1": "Niet mee eens",
+    "option2": "Een beetje",
+    "option3": "In sterke mate",
+    "option4": "Helemaal mee eens"
+  },
+  "acc06": {
+    "question": "Door de onvruchtbaarheid is mijn leven niet compleet.",
+    "option1": "Niet mee eens",
+    "option2": "Een beetje",
+    "option3": "In sterke mate",
+    "option4": "Helemaal mee eens"
+  },
+  "acc07": {
+    "question": "Ik heb de onvruchtbaarheid leren aanvaarden.",
+    "option1": "Niet mee eens",
+    "option2": "Een beetje",
+    "option3": "In sterke mate",
+    "option4": "Helemaal mee eens"
+  },
+  "acc08": {
+    "question": "De onvruchtbaarheid heeft invloed op alles wat belangrijk voor mij is.",
+    "option1": "Niet mee eens",
+    "option2": "Een beetje",
+    "option3": "In sterke mate",
+    "option4": "Helemaal mee eens"
+  },
+  "acc09": {
+    "question": "Ik kan de onvruchtbaarheid accepteren.",
+    "option1": "Niet mee eens",
+    "option2": "Een beetje",
+    "option3": "In sterke mate",
+    "option4": "Helemaal mee eens"
+  },
+  "acc10": {
+    "question": "Ik denk dat ik de problemen van de onvruchtbaarheid aan kan, zelfs als ze niet opgelost worden.",
+    "option1": "Niet mee eens",
+    "option2": "Een beetje",
+    "option3": "In sterke mate",
+    "option4": "Helemaal mee eens"
+  },
+  "acc11": {
+    "question": "Door de onvruchtbaarheid voel ik me vaak hulpeloos.",
+    "option1": "Niet mee eens",
+    "option2": "Een beetje",
+    "option3": "In sterke mate",
+    "option4": "Helemaal mee eens"
+  },
+  "acc12": {
+    "question": "Ik kan goed met de onvruchtbaarheid omgaan.",
+    "option1": "Niet mee eens",
+    "option2": "Een beetje",
+    "option3": "In sterke mate",
+    "option4": "Helemaal mee eens"
+  },
+  "soc01": {
+    "question": "Als ik me gespannen voel, dan is er iemand die mij helpt.",
+    "option1": "Bijna nooit",
+    "option2": "Soms",
+    "option3": "Nogal eens",
+    "option4": "Vaak"
+  },
+  "soc02": {
+    "question": "Als ik iets leuks meemaak, dan is er iemand met wie ik dat kan delen.",
+    "option1": "Bijna nooit",
+    "option2": "Soms",
+    "option3": "Nogal eens",
+    "option4": "Vaak"
+  },
+  "soc03": {
+    "question": "Als ik pijn heb, dan is er iemand die me steunt.",
+    "option1": "Bijna nooit",
+    "option2": "Soms",
+    "option3": "Nogal eens",
+    "option4": "Vaak"
+  },
+  "soc04": {
+    "question": "Als ik verdrietig ben, dan is er iemand met wie ik dat kan delen.",
+    "option1": "Bijna nooit",
+    "option2": "Soms",
+    "option3": "Nogal eens",
+    "option4": "Vaak"
+  },
+  "soc05": {
+    "question": "Als ik hulp nodig heb bij karweitjes die ik niet alleen kan uitvoeren, dan is er iemand die me daarbij helpt.",
+    "option1": "Bijna nooit",
+    "option2": "Soms",
+    "option3": "Nogal eens",
+    "option4": "Vaak"
+  }
+}

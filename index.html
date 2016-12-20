@@ -1,0 +1,678 @@
+﻿<!DOCTYPE html>
+<html lang="NL-nl" xmlns:ng="http://angularjs.org" ng-app="app">
+<head>
+    <title>ScreenIVF</title>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <link href="content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="content/font-awesome.min.css" rel="stylesheet" />
+    <link href="content/flag-icon.min.css" rel="stylesheet" />
+    <link href="content/bootstrap-nav-wizard.min.css" rel="stylesheet" />
+    <link href="content/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body ng-controller="mainController" id="body" ng-init="load()" style="display: none">
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">{{text.title}}</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="flag-icon" ng-class="text.flagClass"></span>
+                                {{text.language}} <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a ng-click="setLanguage('en-US')">
+                                        <span class="flag-icon flag-icon-us"></span>
+                                        English
+                                    </a>
+                                </li>
+                                <li>
+                                    <a ng-click="setLanguage('nl-NL')">
+                                        <span class="flag-icon flag-icon-nl"></span>
+                                        Nederlands
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="content">
+        <div class="container">
+            <div id="wizard-container">
+                <div id="wizard-step-container" class="hidden-xs">
+                    <ul class="nav nav-wizard nav-justified">
+                        <li ng-class="{'active':currentStep==0,'disabled': currentStep < 0, 'done':currentStep>0}"><a ng-click="gotoStep(0)" href="" ng-disabled="currentStep < 1">{{text.stepIntro}}</a></li>
+                        <li ng-class="{'active':currentStep==1,'disabled': currentStep < 1, 'done':currentStep>1}"><a ng-click="gotoStep(1)" href="" ng-disabled="currentStep < 2">{{text.step}} 1</a></li>
+                        <li ng-class="{'active':currentStep==2,'disabled': currentStep < 2, 'done':currentStep>2}"><a ng-click="gotoStep(2)" href="" ng-disabled="currentStep < 3">{{text.step}} 2</a></li>
+                        <li ng-class="{'active':currentStep==3,'disabled': currentStep < 3, 'done':currentStep>3}"><a ng-click="gotoStep(3)" href="" ng-disabled="currentStep < 4">{{text.step}} 3</a></li>
+                        <li ng-class="{'active':currentStep==4,'disabled': currentStep < 4, 'done':currentStep>4}"><a ng-click="gotoStep(4)" href="" ng-disabled="currentStep < 5">{{text.step}} 4</a></li>
+                        <li ng-class="{'active':currentStep==5,'disabled': currentStep < 5, 'done':currentStep>5}"><a ng-click="gotoStep(5)" href="" ng-disabled="currentStep < 6">{{text.stepResult}}</a></li>
+                    </ul><hr />
+                </div>
+
+                <div id="wizard-content-container">
+                    <div ng-show="currentStep==0">
+                        <h1>{{text.stepIntro}}</h1>
+                        <div>
+                            <div id="intro">
+                                <p ng-bind-html="text.intro"></p>
+                                <ul><li ng-repeat="item in text.introBullets">{{item}}</li></ul>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="wizard-navigation-container">
+                            <div class="pull-right">
+                                <span class="btn-group">
+                                    <button class="btn btn-primary" type="button" ng-click="currentStep=1">
+                                        {{text.start}}
+                                        <i class="fa fa-arrow-right"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div ng-show="currentStep==1">
+                        <h1>{{text.step}} 1</h1>
+                        <div>
+                            <div class="alert alert-info alert-left">
+                                <div>
+                                    <strong>{{text.instruction}}</strong>
+                                </div>
+                                <div ng-bind-html="text.instructionAnxiety"></div>
+                            </div>
+                            <div class="form">
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.anx01.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.anx01" class="form-control">
+                                            <option value="0">{{text.anx01.option0}}</option>
+                                            <option value="1">{{text.anx01.option1}}</option>
+                                            <option value="2">{{text.anx01.option2}}</option>
+                                            <option value="3">{{text.anx01.option3}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.anx02.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.anx02" class="form-control">
+                                            <option value="0">{{text.anx02.option0}}</option>
+                                            <option value="1">{{text.anx02.option1}}</option>
+                                            <option value="2">{{text.anx02.option2}}</option>
+                                            <option value="3">{{text.anx02.option3}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.anx03.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.anx03" class="form-control">
+                                            <option value="0">{{text.anx03.option0}}</option>
+                                            <option value="1">{{text.anx03.option1}}</option>
+                                            <option value="2">{{text.anx03.option2}}</option>
+                                            <option value="3">{{text.anx03.option3}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.anx04.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.anx04" class="form-control">
+                                            <option value="0">{{text.anx04.option0}}</option>
+                                            <option value="1">{{text.anx04.option1}}</option>
+                                            <option value="2">{{text.anx04.option2}}</option>
+                                            <option value="3">{{text.anx04.option3}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.anx05.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.anx05" class="form-control">
+                                            <option value="0">{{text.anx05.option0}}</option>
+                                            <option value="1">{{text.anx05.option1}}</option>
+                                            <option value="2">{{text.anx05.option2}}</option>
+                                            <option value="3">{{text.anx05.option3}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.anx06.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.anx06" class="form-control">
+                                            <option value="0">{{text.anx06.option0}}</option>
+                                            <option value="1">{{text.anx06.option1}}</option>
+                                            <option value="2">{{text.anx06.option2}}</option>
+                                            <option value="3">{{text.anx06.option3}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.anx07.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.anx07" class="form-control">
+                                            <option value="0">{{text.anx07.option0}}</option>
+                                            <option value="1">{{text.anx07.option1}}</option>
+                                            <option value="2">{{text.anx07.option2}}</option>
+                                            <option value="3">{{text.anx07.option3}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.anx08.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.anx08" class="form-control">
+                                            <option value="0">{{text.anx08.option0}}</option>
+                                            <option value="1">{{text.anx08.option1}}</option>
+                                            <option value="2">{{text.anx08.option2}}</option>
+                                            <option value="3">{{text.anx08.option3}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.anx09.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.anx09" class="form-control">
+                                            <option value="0">{{text.anx09.option0}}</option>
+                                            <option value="1">{{text.anx09.option1}}</option>
+                                            <option value="2">{{text.anx09.option2}}</option>
+                                            <option value="3">{{text.anx09.option3}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.anx10.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.anx10" class="form-control">
+                                            <option value="0">{{text.anx10.option0}}</option>
+                                            <option value="1">{{text.anx10.option1}}</option>
+                                            <option value="2">{{text.anx10.option2}}</option>
+                                            <option value="3">{{text.anx10.option3}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <hr />
+                        <div class="wizard-navigation-container">
+                            <div class="pull-right">
+                                <span class="btn-group">
+                                    <button class="btn btn-default" type="button" ng-click="currentStep=0">
+                                        <i class="fa fa-arrow-left"></i>
+                                        {{text.previous}}
+                                    </button>
+                                    <button ng-disabled="angst()==null" class="btn btn-primary" type="button" ng-click="currentStep=2">
+                                        {{text.next}}
+                                        <i class="fa fa-arrow-right"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div ng-show="currentStep==2">
+                        <h1>{{text.step}} 2</h1>
+                        <div>
+                            <div class="alert alert-info alert-left">
+                                <div>
+                                    <strong>{{text.instruction}}</strong>
+                                </div>
+                                <div ng-bind-html="text.instructionDepression"></div>
+                            </div>
+                            <div class="form">
+                                <div class="form-group">
+                                    <label class="control-label col-sm-1">{{text.dep01.question}}</label>
+                                    <div class="col-sm-11">
+                                        <input type="radio" ng-model="screen.dep01" value="3" /> {{text.dep01.option3}}<br />
+                                        <input type="radio" ng-model="screen.dep01" value="2" /> {{text.dep01.option2}}<br />
+                                        <input type="radio" ng-model="screen.dep01" value="1" /> {{text.dep01.option1}}<br />
+                                        <input type="radio" ng-model="screen.dep01" value="0" /> {{text.dep01.option0}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-1">{{text.dep02.question}}</label>
+                                    <div class="col-sm-11">
+                                        <input type="radio" ng-model="screen.dep02" value="0" /> {{text.dep02.option0}}<br />
+                                        <input type="radio" ng-model="screen.dep02" value="1" /> {{text.dep02.option1}}<br />
+                                        <input type="radio" ng-model="screen.dep02" value="2" /> {{text.dep02.option2}}<br />
+                                        <input type="radio" ng-model="screen.dep02" value="3" /> {{text.dep02.option3}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-1">{{text.dep03.question}}</label>
+                                    <div class="col-sm-11">
+                                        <input type="radio" ng-model="screen.dep03" value="3" /> {{text.dep03.option3}}<br />
+                                        <input type="radio" ng-model="screen.dep03" value="2" /> {{text.dep03.option2}}<br />
+                                        <input type="radio" ng-model="screen.dep03" value="1" /> {{text.dep03.option1}}<br />
+                                        <input type="radio" ng-model="screen.dep03" value="0" /> {{text.dep03.option0}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-1">{{text.dep04.question}}</label>
+                                    <div class="col-sm-11">
+                                        <input type="radio" ng-model="screen.dep04" value="0" /> {{text.dep04.option0}}<br />
+                                        <input type="radio" ng-model="screen.dep04" value="1" /> {{text.dep04.option1}}<br />
+                                        <input type="radio" ng-model="screen.dep04" value="2" /> {{text.dep04.option2}}<br />
+                                        <input type="radio" ng-model="screen.dep04" value="3" /> {{text.dep04.option3}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-1">{{text.dep05.question}}</label>
+                                    <div class="col-sm-11">
+                                        <input type="radio" ng-model="screen.dep05" value="3" /> {{text.dep05.option3}}<br />
+                                        <input type="radio" ng-model="screen.dep05" value="2" /> {{text.dep05.option2}}<br />
+                                        <input type="radio" ng-model="screen.dep05" value="1" /> {{text.dep05.option1}}<br />
+                                        <input type="radio" ng-model="screen.dep05" value="0" /> {{text.dep05.option0}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-1">{{text.dep06.question}}</label>
+                                    <div class="col-sm-11">
+                                        <input type="radio" ng-model="screen.dep06" value="3" /> {{text.dep06.option3}}<br />
+                                        <input type="radio" ng-model="screen.dep06" value="2" /> {{text.dep06.option2}}<br />
+                                        <input type="radio" ng-model="screen.dep06" value="1" /> {{text.dep06.option1}}<br />
+                                        <input type="radio" ng-model="screen.dep06" value="0" /> {{text.dep06.option0}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-1">{{text.dep07.question}}</label>
+                                    <div class="col-sm-11">
+                                        <input type="radio" ng-model="screen.dep07" value="0" /> {{text.dep07.option0}}<br />
+                                        <input type="radio" ng-model="screen.dep07" value="1" /> {{text.dep07.option1}}<br />
+                                        <input type="radio" ng-model="screen.dep07" value="2" /> {{text.dep07.option2}}<br />
+                                        <input type="radio" ng-model="screen.dep07" value="3" /> {{text.dep07.option3}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <hr />
+                        <div class="wizard-navigation-container">
+                            <div class="pull-right">
+                                <span class="btn-group">
+                                    <button class="btn btn-default" type="button" ng-click="currentStep=1">
+                                        <i class="fa fa-arrow-left"></i>
+                                        {{text.previous}}
+                                    </button>
+                                    <button ng-disabled="depressie()==null" class="btn btn-primary" type="button" ng-click="currentStep=3">
+                                        {{text.next}}
+                                        <i class="fa fa-arrow-right"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div ng-show="currentStep==3">
+                        <h1>{{text.step}} 3</h1>
+                        <div>
+                            <div class="alert alert-info alert-left">
+                                <div>
+                                    <strong>{{text.instruction}}</strong>
+                                </div>
+                                <div ng-bind-html="text.instructionAcceptance"></div>
+                            </div>
+                            <div class="form">
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.acc01.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.acc01" class="form-control">
+                                            <option value="1">{{text.acc01.option1}}</option>
+                                            <option value="2">{{text.acc01.option2}}</option>
+                                            <option value="3">{{text.acc01.option3}}</option>
+                                            <option value="4">{{text.acc01.option4}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.acc02.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.acc02" class="form-control">
+                                            <option value="1">{{text.acc02.option1}}</option>
+                                            <option value="2">{{text.acc02.option2}}</option>
+                                            <option value="3">{{text.acc02.option3}}</option>
+                                            <option value="4">{{text.acc02.option4}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.acc03.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.acc03" class="form-control">
+                                            <option value="1">{{text.acc03.option1}}</option>
+                                            <option value="2">{{text.acc03.option2}}</option>
+                                            <option value="3">{{text.acc03.option3}}</option>
+                                            <option value="4">{{text.acc03.option4}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.acc04.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.acc04" class="form-control">
+                                            <option value="1">{{text.acc04.option1}}</option>
+                                            <option value="2">{{text.acc04.option2}}</option>
+                                            <option value="3">{{text.acc04.option3}}</option>
+                                            <option value="4">{{text.acc04.option4}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.acc05.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.acc05" class="form-control">
+                                            <option value="1">{{text.acc05.option1}}</option>
+                                            <option value="2">{{text.acc05.option2}}</option>
+                                            <option value="3">{{text.acc05.option3}}</option>
+                                            <option value="4">{{text.acc05.option4}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.acc06.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.acc06" class="form-control">
+                                            <option value="1">{{text.acc06.option1}}</option>
+                                            <option value="2">{{text.acc06.option2}}</option>
+                                            <option value="3">{{text.acc06.option3}}</option>
+                                            <option value="4">{{text.acc06.option4}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.acc07.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.acc07" class="form-control">
+                                            <option value="1">{{text.acc07.option1}}</option>
+                                            <option value="2">{{text.acc07.option2}}</option>
+                                            <option value="3">{{text.acc07.option3}}</option>
+                                            <option value="4">{{text.acc07.option4}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.acc08.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.acc08" class="form-control">
+                                            <option value="1">{{text.acc08.option1}}</option>
+                                            <option value="2">{{text.acc08.option2}}</option>
+                                            <option value="3">{{text.acc08.option3}}</option>
+                                            <option value="4">{{text.acc08.option4}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.acc09.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.acc09" class="form-control">
+                                            <option value="1">{{text.acc09.option1}}</option>
+                                            <option value="2">{{text.acc09.option2}}</option>
+                                            <option value="3">{{text.acc09.option3}}</option>
+                                            <option value="4">{{text.acc09.option4}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.acc10.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.acc10" class="form-control">
+                                            <option value="1">{{text.acc10.option1}}</option>
+                                            <option value="2">{{text.acc10.option2}}</option>
+                                            <option value="3">{{text.acc10.option3}}</option>
+                                            <option value="4">{{text.acc10.option4}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.acc11.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.acc11" class="form-control" id="acc11">
+                                            <option value="1">{{text.acc11.option1}}</option>
+                                            <option value="2">{{text.acc11.option2}}</option>
+                                            <option value="3">{{text.acc11.option3}}</option>
+                                            <option value="4">{{text.acc11.option4}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.acc12.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.acc12" class="form-control">
+                                            <option value="1">{{text.acc12.option1}}</option>
+                                            <option value="2">{{text.acc12.option2}}</option>
+                                            <option value="3">{{text.acc12.option3}}</option>
+                                            <option value="4">{{text.acc12.option4}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <hr />
+                        <div class="wizard-navigation-container">
+                            <div class="pull-right">
+                                <span class="btn-group">
+                                    <button class="btn btn-default" type="button" ng-click="currentStep=2">
+                                        <i class="fa fa-arrow-left"></i>
+                                        {{text.previous}}
+                                    </button>
+                                    <button ng-disabled="acceptatie()==null || hulpeloosheid()==null" class="btn btn-primary" type="button" ng-click="currentStep=4">
+                                        {{text.next}}
+                                        <i class="fa fa-arrow-right"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div ng-show="currentStep==4">
+                        <h1>{{text.step}} 4</h1>  <div>
+                            <div class="alert alert-info alert-left">
+                                <div>
+                                    <strong>{{text.instruction}}</strong>
+                                </div>
+                                <div ng-bind-html="text.instructionSupport"></div>
+                            </div>
+                            <div class="form">
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.soc01.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.soc1" class="form-control">
+                                            <option value="1">{{text.soc01.option1}}</option>
+                                            <option value="2">{{text.soc01.option2}}</option>
+                                            <option value="3">{{text.soc01.option3}}</option>
+                                            <option value="4">{{text.soc01.option4}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.soc02.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.soc2" class="form-control">
+                                            <option value="1">{{text.soc02.option1}}</option>
+                                            <option value="2">{{text.soc02.option2}}</option>
+                                            <option value="3">{{text.soc02.option3}}</option>
+                                            <option value="4">{{text.soc02.option4}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.soc03.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.soc3" class="form-control">
+                                            <option value="1">{{text.soc03.option1}}</option>
+                                            <option value="2">{{text.soc03.option2}}</option>
+                                            <option value="3">{{text.soc03.option3}}</option>
+                                            <option value="4">{{text.soc03.option4}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">{{text.soc04.question}}</label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.soc4" class="form-control">
+                                            <option value="1">{{text.soc04.option1}}</option>
+                                            <option value="2">{{text.soc04.option2}}</option>
+                                            <option value="3">{{text.soc04.option3}}</option>
+                                            <option value="4">{{text.soc04.option4}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-9">
+                                        {{text.soc05.question}}
+                                    </label>
+                                    <div class="col-sm-3">
+                                        <select ng-model="screen.soc5" class="form-control">
+                                            <option value="1">{{text.soc05.option1}}</option>
+                                            <option value="2">{{text.soc05.option2}}</option>
+                                            <option value="3">{{text.soc05.option3}}</option>
+                                            <option value="4">{{text.soc05.option4}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <hr />
+                        <div class="wizard-navigation-container">
+                            <div class="pull-right">
+                                <span class="btn-group">
+                                    <button class="btn btn-default" type="button" ng-click="currentStep=3">
+                                        <i class="fa fa-arrow-left"></i>
+                                        {{text.previous}}
+                                    </button>
+                                    <button ng-disabled="socialesteun()==null" class="btn btn-primary" type="button" ng-click="currentStep=5">
+                                        {{text.next}}
+                                        <i class="fa fa-arrow-right"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div ng-show="currentStep==5">
+                        <h1>{{text.stepResult}}</h1>
+                        <div>
+                            <div id="outcome" class="well">
+                                <div class="row">
+                                    <div class="col-sm-2 text-center col-sm-offset-1">
+                                        <div class="row">
+                                            <div class="col-xs-9 col-sm-12 title">{{text.dimensionAnxiety}}</div>
+                                            <div class="col-xs-3 col-sm-12" ng-show="angst()!=null">
+                                                <i class="fa fa-circle fa-2x text-warning" ng-show="angstAtRisk()"></i>
+                                                <i class="fa fa-circle fa-2x text-success" ng-show="!angstAtRisk()"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 text-center">
+                                        <div class="row">
+                                            <div class="col-xs-9 col-sm-12 title">{{text.dimensionDepression}}</div>
+                                            <div class="col-xs-3 col-sm-12" ng-show="depressie()!=null">
+                                                <i class="fa fa-circle fa-2x text-warning" ng-show="depressieAtRisk()"></i>
+                                                <i class="fa fa-circle fa-2x text-success" ng-show="!depressieAtRisk()"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 text-center">
+                                        <div class="row">
+                                            <div class="col-xs-9 col-sm-12 title">{{text.dimensionAcceptance}}</div>
+                                            <div class="col-xs-3 col-sm-12" ng-show="acceptatie()!=null">
+                                                <i class="fa fa-circle fa-2x text-warning" ng-show="acceptatieAtRisk()"></i>
+                                                <i class="fa fa-circle fa-2x text-success" ng-show="!acceptatieAtRisk()"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 text-center">
+                                        <div class="row">
+                                            <div class="col-xs-9 col-sm-12 title">{{text.dimensionHelpless}}</div>
+                                            <div class="col-xs-3 col-sm-12" ng-show="hulpeloosheid()!=null">
+                                                <i class="fa fa-circle fa-2x text-warning" ng-show="hulpeloosheidAtRisk()"></i>
+                                                <i class="fa fa-circle fa-2x text-success" ng-show="!hulpeloosheidAtRisk()"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 text-center">
+                                        <div class="row">
+                                            <div class="col-xs-9 col-sm-12 title">{{text.dimensionSupport}}</div>
+                                            <div class="col-xs-3 col-sm-12" ng-show="socialesteun()!=null">
+                                                <i class="fa fa-circle fa-2x text-warning" ng-show="socialesteunAtRisk()"></i>
+                                                <i class="fa fa-circle fa-2x text-success" ng-show="!socialesteunAtRisk()"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+      <div ng-show="atRisk()" class="alert alert-danger alert-left">
+                                <div ng-bind-html="text.atRisk"></div>
+                            </div>
+                            <div ng-show="!atRisk()" class="alert alert-success alert-left">
+                                <div ng-bind-html="text.notAtRisk"></div>
+                            </div>
+
+                        </div>
+                        <hr />
+                        <div class="wizard-navigation-container">
+                            <div class="pull-right">
+                                <span class="btn-group">
+                                    <button class="btn btn-default" type="button" ng-click="currentStep=4">
+                                        <i class="fa fa-arrow-left"></i>
+                                        {{text.previous}}
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+            <div class="disclaimer" ng-show="showDisclaimer">
+
+                <div class="container">
+                    <div class="pull-right visible-xs">
+                        <a ng-click="showDisclaimer=false"><i class="fa fa-times-circle fa-2x"></i></a>
+
+                    </div> <div ng-bind-html="text.disclaimer">
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="container" ng-bind-html="text.copyright"></div>
+            </div>
+        </nav>
+    </footer>
+
+    <a href="https://github.com/Radboudumc/ScreenIVF" target="_blank" class="hidden-xs hidden-sm"><img style="position: absolute; top: 0; left: 0; border: 0; z-index:10001" src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>
+
+    <script src="scripts/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="scripts/angular.min.js" type="text/javascript"></script>
+    <script src="scripts/angular-sanitize.min.js"></script>
+    <script src="app/app.js" type="text/javascript"></script>
+    <script src="app/controllers/main.js"></script>
+</body>
+</html>

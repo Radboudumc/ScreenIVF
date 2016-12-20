@@ -1,0 +1,267 @@
+﻿{
+  "language": "English",
+  "flagClass": "flag-icon-us",
+  "title": "ScreenIVF",
+
+  "intro": "Fertility treatments are intensive treatment forms, which could affect all parts of your life. We would like to support couples during treatment in the best possible way, which is why we have developed a short screening questionnaire. The information you provide by filling in this questionnaire will help us to determine the possible emotional impact of the treatment for you. We will then be able to advise you as to whether you might benefit from additional support from a counselor (psychologist or social worker).",
+  "introBullets": [],
+  "step": "Step",
+  "next": "Next step",
+  "previous": "previous step",
+  "start": "Start",
+  "stepIntro": "Introduction",
+  "stepResult": "Result",
+  "copyright": "ESHRE SIG psychology and counselling",
+  "disclaimer": "DISCLAIMER: We will not be liable for any harm or loss arising from the use of this website. No rights or obligations can be derived from the use of this website. Beck AT, Guth D, Steer RA, Ball R. Screening for major depression disorders in medical inpatients with the Beck Depression Inventory for primary care. Behav Res Ther 1997;35;785-91. Verhaak CM, Lintsen AM, Evers AW, Braat DD. Who is at risk of emotional problems and how do you know? Screening of women going for IVF treatment. Hum Reprod. 2010;25:1234-40.",
+  "atRisk": "Bases on your answers to the SCREENIVF we think that you could benefit from additional psychosocial support. We advise you to contact a professional from the IVF team or your general practitioner.",
+  "notAtRisk": "Based on your answers to the SCREENIVF we so no reason to advise you to contact a counsellor for additional psychosocial support. However, if you feel any need yourself, just contact your health care professional.",
+  "dimensionAnxiety": "Tension",
+  "dimensionDepression": "Sad mood",
+  "dimensionAcceptance": "Acceptance",
+  "dimensionHelpless": "Helplessness",
+  "dimensionSupport": "Social support",
+  "instruction": "Instruction",
+  "instructionAnxiety": "Below you can find a couple of statements that people use to describe themselves. Read every item carefully and encircle the number next to the statement that most closely matches with how you felt during the last week. There are no right or wrong answers. Don’t think too much, your first impression is usually best. So it is about how you felt during <u>the last week</u>.",
+  "instructionDepression": "The next questionnaire consists of statements in a cluster together. Read every statement carefully. In each cluster select that statement that most closely matches with how you felt during the last week. Encircle the number before the line of the statement you chose. Be sure that you carefully read each statement before making a choice. So it is about how you felt during <u>the last week</u>.",
+  "instructionAcceptance": "The next items are statements from people with fertility problems. We ask you to indicate to what extent you agree with the statements. You can do that by encircling the number next to the statement that most closely matches with what you think about the statement. Do not think too deeply, your first impression is usually best.",
+  "instructionHelpless": "",
+  "instructionSupport": "These statements are about your social relationships. We ask you to encircle the number of items that most closely match with how you feel about your social relationships. The questions refer to how you felt about your social relationships <u>the last six months</u>.",
+  "anx01": {
+    "question": "I feel fine ",
+    "option0": "Nearly never",
+    "option1": "Sometimes",
+    "option2": "Often",
+    "option3": "Nearly always"
+  },
+  "anx02": {
+    "question": "I feel satisfied",
+    "option0": "Nearly never",
+    "option1": "Sometimes",
+    "option2": "Often",
+    "option3": "Nearly always"
+  },
+  "anx03": {
+    "question": "I worry too much about not really important things",
+    "option0": "Nearly never",
+    "option1": "Sometimes",
+    "option2": "Often",
+    "option3": "Nearly always"
+  },
+  "anx04": {
+    "question": "I am happy ",
+    "option0": "Nearly never",
+    "option1": "Sometimes",
+    "option2": "Often",
+    "option3": "Nearly always"
+  },
+  "anx05": {
+    "question": "I am troubled by disturbing thoughts",
+    "option0": "Nearly never",
+    "option1": "Sometimes",
+    "option2": "Often",
+    "option3": "Nearly always"
+  },
+  "anx06": {
+    "question": "I feel safe",
+    "option0": "Nearly never",
+    "option1": "Sometimes",
+    "option2": "Often",
+    "option3": "Nearly always"
+  },
+  "anx07": {
+    "question": "I am pleased ",
+    "option0": "Nearly never",
+    "option1": "Sometimes",
+    "option2": "Often",
+    "option3": "Nearly always"
+  },
+  "anx08": {
+    "question": "There are thoughts that keep haunting me",
+    "option0": "Nearly never",
+    "option1": "Sometimes",
+    "option2": "Often",
+    "option3": "Nearly always"
+  },
+  "anx09": {
+    "question": "I take disappointments so seriously that I cannot get them out of my mind",
+    "option0": "Nearly never",
+    "option1": "Sometimes",
+    "option2": "Often",
+    "option3": "Nearly always"
+  },
+  "anx10": {
+    "question": "I get very nervous and worried when thinking about my current troubles",
+    "option0": "Nearly never",
+    "option1": "Sometimes",
+    "option2": "Often",
+    "option3": "Nearly always"
+  },
+  "dep01": {
+    "question": "A",
+    "option0": "I do not feel sad",
+    "option1": "I feel sad",
+    "option2": "I am sad all the time and I can’t snap out of it",
+    "option3": "I am so sad and unhappy that I can’t stand it"
+  },
+  "dep02": {
+    "question": "B",
+    "option0": "I am not particularly discouraged about the future",
+    "option1": "I feel discouraged about the future",
+    "option2": "I feel I have nothing to look forward to",
+    "option3": "I feel the future is hopeless and that things cannot improve"
+  },
+  "dep03": {
+    "question": "C",
+    "option0": "I do not feel like a failure",
+    "option1": "I feel I have failed more than the average person",
+    "option2": "As I look back on my life, all I can see is a lot of failures",
+    "option3": "I feel I am a complete failure as a person"
+  },
+  "dep04": {
+    "question": "D",
+    "option0": "I get as much satisfaction out of things as I used to",
+    "option1": "I don’t enjoy things the way I used to",
+    "option2": "I don’t get real satisfaction out of anything anymore",
+    "option3": "I am dissatisfied or bored with everything"
+  },
+  "dep05": {
+    "question": "E",
+    "option0": "I don’t feel disappointed in myself",
+    "option1": "I am disappointed in myself",
+    "option2": "I am disgusted with myself",
+    "option3": "I hate myself"
+  },
+  "dep06": {
+    "question": "F",
+    "option0": "I don’t feel I am any worse than anybody else",
+    "option1": "I am critical of myself for my weaknesses or mistakes",
+    "option2": "I blame myself all the time for my faults",
+    "option3": "I blame myself for everything bad that happens"
+  },
+  "dep07": {
+    "question": "G",
+    "option0": "I don’t have any thoughts about killing myself",
+    "option1": "I have thoughts about killing myself, but I would not carry them out",
+    "option2": "I would like to kill myself",
+    "option3": "I would like to kill myself if I had the chance"
+  },
+  "acc01": {
+    "question": "Because of my fertility problems I miss things that are most important for me",
+    "option1": "Do not agree",
+    "option2": "Agree a little bit",
+    "option3": "Agree",
+    "option4": "Strongly agree"
+  },
+  "acc02": {
+    "question": "I can deal with the consequences of my fertility problems ",
+    "option1": "Do not agree",
+    "option2": "Agree a little bit",
+    "option3": "Agree",
+    "option4": "Strongly agree"
+  },
+  "acc03": {
+    "question": "I have learned to live with my fertility problems ",
+    "option1": "Do not agree",
+    "option2": "Agree a little bit",
+    "option3": "Agree",
+    "option4": "Strongly agree"
+  },
+  "acc04": {
+    "question": "My fertility problems control my life",
+    "option1": "Do not agree",
+    "option2": "Agree a little bit",
+    "option3": "Agree",
+    "option4": "Strongly agree"
+  },
+  "acc05": {
+    "question": "My fertility problems sometimes give me the feeling of being useless ",
+    "option1": "Do not agree",
+    "option2": "Agree a little bit",
+    "option3": "Agree",
+    "option4": "Strongly agree"
+  },
+  "acc06": {
+    "question": "My fertility problems make my life incomplete",
+    "option1": "Do not agree",
+    "option2": "Agree a little bit",
+    "option3": "Agree",
+    "option4": "Strongly agree"
+  },
+  "acc07": {
+    "question": "I have learned to accept my fertility problems ",
+    "option1": "Do not agree",
+    "option2": "Agree a little bit",
+    "option3": "Agree",
+    "option4": "Strongly agree"
+  },
+  "acc08": {
+    "question": "My fertility problems affect everything that is important for me ",
+    "option1": "Do not agree",
+    "option2": "Agree a little bit",
+    "option3": "Agree",
+    "option4": "Strongly agree"
+  },
+  "acc09": {
+    "question": "I can accept my fertility problems ",
+    "option1": "Do not agree",
+    "option2": "Agree a little bit",
+    "option3": "Agree",
+    "option4": "Strongly agree"
+  },
+  "acc10": {
+    "question": "I think I can cope with my fertility problems, even if they are not solved ",
+    "option1": "Do not agree",
+    "option2": "Agree a little bit",
+    "option3": "Agree",
+    "option4": "Strongly agree"
+  },
+  "acc11": {
+    "question": "I often feel helpless because of my fertility problems ",
+    "option1": "Do not agree",
+    "option2": "Agree a little bit",
+    "option3": "Agree",
+    "option4": "Strongly agree"
+  },
+  "acc12": {
+    "question": "I can cope well with my fertility problems",
+    "option1": "Do not agree",
+    "option2": "Agree a little bit",
+    "option3": "Agree",
+    "option4": "Strongly agree"
+  },
+  "soc01": {
+    "question": "When I feel tense or nervous, there is someone to help me",
+    "option1": "Nearly never",
+    "option2": "Sometimes",
+    "option3": "Regularly",
+    "option4": "Often"
+  },
+  "soc02": {
+    "question": "When I experience some nice things, there is someone with whom to talk about it ",
+    "option1": "Nearly never",
+    "option2": "Sometimes",
+    "option3": "Regularly",
+    "option4": "Often"
+  },
+  "soc03": {
+    "question": "When I am in pain there is someone to comfort me",
+    "option1": "Nearly never",
+    "option2": "Sometimes",
+    "option3": "Regularly",
+    "option4": "Often"
+  },
+  "soc04": {
+    "question": "When I am sad there is someone with whom to talk about it",
+    "option1": "Nearly never",
+    "option2": "Sometimes",
+    "option3": "Regularly",
+    "option4": "Often"
+  },
+  "soc05": {
+    "question": "When I need help with a job I cannot carry out alone there is someone to help me",
+    "option1": "Nearly never",
+    "option2": "Sometimes",
+    "option3": "Regularly",
+    "option4": "Often"
+  }
+}

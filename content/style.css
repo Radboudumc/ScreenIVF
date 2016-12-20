@@ -1,0 +1,42 @@
+body { color: #555555; font-family: Arial, sans-serif; }
+h1 { line-height: 20px; font-size: 18px; color: #006e79; }
+h2 { line-height: 20px; font-size: 18px; color: #006e79; }
+h3 { line-height: 20px; font-size: 18px; color: #006e79; }
+
+a { outline: none !important; }
+.alert { text-align: center;margin-top: 10px; margin-bottom:10px }
+.alert.alert-left { text-align: left; }
+.alert.alert-right { text-align: right; }
+
+.alert-info{ background-color: #efefef;border-color: #ccc; color:#333}
+
+header .navbar-brand { color: #006e79; }
+
+#content { margin-top: 70px;margin-bottom: 170px }
+#outcome { background: #e8f0f2; border-top: 1px solid #d9e2e4; border-bottom: 1px solid #d9e2e4; margin-bottom: 15px; }
+
+.footer { background: #006e79; color: #fff; padding: 10px 20px; text-align: right; }
+    .footer a { color: #fff; text-decoration: underline; font-weight: normal; font-style: normal; }
+        .footer a:hover { text-decoration: none; }
+
+
+.disclaimer { font-size: 10px; color: #666; margin-top: 5px; margin-bottom:10px}
+.resultitem { padding-right: 14px; width: 125px; text-align: center; cursor: default; }
+    .resultitem.active { cursor: pointer; }
+        .resultitem.active strong { text-decoration: underline; }
+
+a[ng-click] { cursor: pointer; }
+
+#outcome .text-success { color: green; }
+#outcome .text-warning { color: orange; }
+#outcome .text-danger { color: red; }
+#outcome .text-info { color: grey; }
+
+#outcome .title{font-weight: bold}
+
+.navbar.navbar-fixed-bottom{min-height:40px}
+
+.form-group{ border-top: solid 1px #efefef;clear: both;padding-top: 5px;padding-bottom: 5px; display: block}
+.form-group:first-child{ border-top: solid 0px #efefef}
+.form-group .control-label{ margin-top: 8px;}
+.form-group select{ margin-bottom: 5px;}
