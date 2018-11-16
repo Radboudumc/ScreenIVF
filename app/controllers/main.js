@@ -48,13 +48,13 @@
         var value;
         try {
             value =
-                (3 - $scope.screen.anx01 / 1) +
-                (3 - $scope.screen.anx02 / 1) +
+                (4 - $scope.screen.anx01 / 1) +
+                (4 - $scope.screen.anx02 / 1) +
                 (0 + $scope.screen.anx03 / 1) +
-                (3 - $scope.screen.anx04 / 1) +
+                (4 - $scope.screen.anx04 / 1) +
                 (0 + $scope.screen.anx05 / 1) +
-                (3 - $scope.screen.anx06 / 1) +
-                (3 - $scope.screen.anx07 / 1) +
+                (4 - $scope.screen.anx06 / 1) +
+                (4 - $scope.screen.anx07 / 1) +
                 (0 + $scope.screen.anx08 / 1) +
                 (0 + $scope.screen.anx09 / 1) +
                 (0 + $scope.screen.anx10 / 1);
