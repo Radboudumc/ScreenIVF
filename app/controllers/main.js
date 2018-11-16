@@ -82,7 +82,7 @@
             value = null;
         return value;
     };
-    $scope.acceptatieAtRisk = function() { return $scope.acceptatie() <= 9; };
+    $scope.acceptatieAtRisk = function() { return $scope.acceptatie() <= 11; };
     $scope.hulpeloosheid = function () {
         var value;
         try {
@@ -99,7 +99,7 @@
             value = null;
         return value;
     };
-    $scope.hulpeloosheidAtRisk = function() { return $scope.hulpeloosheid() >= 13; };
+    $scope.hulpeloosheidAtRisk = function() { return $scope.hulpeloosheid() >= 14; };
     $scope.socialesteun = function () {
         var value;
         try {
@@ -115,7 +115,7 @@
             value = null;
         return value;
     };
-    $scope.socialesteunAtRisk = function() { return $scope.socialesteun() <= 14; };
+    $scope.socialesteunAtRisk = function() { return $scope.socialesteun() <= 15; };
 
     $scope.atRisk = function() {
         if ($scope.depressieAtRisk())
